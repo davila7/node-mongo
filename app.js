@@ -7,7 +7,7 @@ const app = express();
 
 
 //mongodb
-mongoose.connect('mongodb://mongo:LGOfjEaX9Xl96FvWX53y@containers-us-west-133.railway.app:6415/todo_express',
+mongoose.connect('mongodb://mongo:27017/todo_express',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -16,6 +16,8 @@ mongoose.connect('mongodb://mongo:LGOfjEaX9Xl96FvWX53y@containers-us-west-133.ra
     .then(() => console.log('MongoDB Conectada'))
     .catch(err => console.log(err)
 );
+
+
 
 //middlewares
 app.use(express.urlencoded({ extended: true }));
